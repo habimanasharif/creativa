@@ -257,20 +257,25 @@ select {
   margin: 0 0 8px;
 }
 .service-card p {
-  font-size: 12px;
+  font-size: 13px;
+  line-height: 1.45;
   color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .service-card ul {
   padding-left: 17px;
   color: #5d716d;
   font-size: 11px;
-  min-height: 94px;
+  min-height: 78px;
 }
 .service-card li {
   margin: 3px 0;
 }
 .service-card > a {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 800;
   color: var(--green);
   display: flex;
@@ -724,7 +729,8 @@ select {
     text-align: center;
   }
   .hero {
-    padding-top: 35px;
+    padding-top: 0;
+    min-height: auto;
   }
   .hero-grid,
   .content-grid,
@@ -818,12 +824,12 @@ select {
 /* Homepage reference redesign */
 .hero {
   overflow: hidden;
-  padding: 48px 0 0;
+  padding: 0;
 }
 .hero-grid {
   position: relative;
   grid-template-columns: 0.92fr 1.08fr;
-  min-height: 590px;
+  min-height: calc(100vh - 76px);
   gap: 0;
 }
 .hero-copy {
@@ -833,8 +839,9 @@ select {
 }
 .hero-copy p { max-width: 500px; }
 .hero-photo {
-  height: 590px;
-  border-radius: 34px 34px 0 0;
+  height: calc(100vh - 76px);
+  min-height: 590px;
+  border-radius: 0;
   margin-left: -90px;
   box-shadow: none;
   background-image: url("https://images.unsplash.com/photo-1559234938-b60fff04894d?auto=format&fit=crop&w=1100&q=85");
@@ -860,7 +867,7 @@ select {
 .service-grid { gap: 20px; }
 .service-card {
   border-radius: 22px;
-  padding: 29px 25px 25px;
+  padding: 24px 25px 20px;
   transition: transform .2s ease, box-shadow .2s ease;
 }
 .service-card:hover {
@@ -870,7 +877,7 @@ select {
 .service-icon {
   width: 54px;
   height: 54px;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
   border: 0;
 }
 .service-card:nth-child(1) .service-icon { background: #e5f2ee; color: #08766c; }
@@ -1024,7 +1031,7 @@ select {
 @media (max-width: 760px) {
   .hero-grid { display: flex; flex-direction: column; min-height: auto; }
   .hero-copy { padding: 35px 0 25px; }
-  .hero-photo { order: 0; width: calc(100% + 28px); margin: 0 -14px; height: 390px; border-radius: 28px 28px 0 0; }
+  .hero-photo { order: 0; width: calc(100% + 28px); margin: 0 -14px; height: 390px; border-radius: 0; min-height: 390px; }
   .hero-photo:before { left: 0; top: -80px; width: 100%; height: 150px; bottom: auto; background: linear-gradient(180deg, var(--cream), rgba(251,248,241,0)); }
   .hero-photo:after { background: linear-gradient(180deg, rgba(251,248,241,.3), transparent 25%, rgba(0,60,55,.12)); }
   .why-grid { grid-template-columns: 1fr; }
