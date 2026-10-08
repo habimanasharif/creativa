@@ -1379,3 +1379,63 @@ select {
     border-radius: 12px;
   }
 }
+
+
+/* Contact page map and inline contact details */
+.contact-card {
+  padding: 26px;
+}
+.contact-card .contact-item {
+  display: inline-flex;
+  width: calc(50% - 8px);
+  vertical-align: top;
+  margin: 16px 8px 8px 0;
+  align-items: center;
+}
+.contact-card .contact-item:nth-of-type(3) {
+  width: 100%;
+}
+.contact-card .contact-item .service-icon {
+  margin-bottom: 0;
+}
+.contact-map {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 24px;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 24px rgba(0, 63, 58, .06);
+}
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+.contact-form-heading {
+  margin: 0 0 20px;
+}
+.contact-form-heading h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  line-height: 1.15;
+  margin: 6px 0 0;
+  color: var(--ink);
+}
+@media (max-width: 900px) and (min-width: 761px) {
+  .contact-card .contact-item {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media (max-width: 760px) {
+  .contact-card .contact-item,
+  .contact-card .contact-item:nth-of-type(3) {
+    width: 100%;
+    margin: 16px 0 8px;
+  }
+  .contact-map {
+    height: 220px;
+  }
+}
