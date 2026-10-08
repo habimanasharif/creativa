@@ -6,7 +6,7 @@ export default function Contact() {
   const [sent, setSent] = useState(false);
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero contact-page-hero">
         <div className="container">
           <span className="eyebrow" style={{ color: "#c6e8df" }}>
             LET'S CONNECT
