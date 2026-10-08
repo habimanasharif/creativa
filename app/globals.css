@@ -902,7 +902,7 @@ select {
 .why-photo {
   position: relative;
   min-height: 610px;
-  background: url("https://images.unsplash.com/photo-1576765608866-5b51046452be?auto=format&fit=crop&w=1100&q=85") center/cover;
+  background: url("https://images.openai.com/static-rsc-4/Q-y-Sbd4EGJL50Grgx7rZDMxiqmdeKQDcbzPrR8UYRxRyN22vLSOxEVXeTknvgW5Hnm-rHlel6IH3JPO2NO3OdkJzci4VcefWU22XvhRCog_w_adS-ujnutER4w7QxZ_Lhv2T7CzgoTQwnBiwAqAbHpQ2lCXY2CpCYBzl3XPg4V1onUrW91aVosmeWLjHHcs?purpose=fullsize") center/cover;
 }
 .why-photo:after {
   content: "";
