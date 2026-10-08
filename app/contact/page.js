@@ -64,9 +64,6 @@ export default function Contact() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div className="notice">
-              Service area: Kingston and surrounding areas.
-            </div>
           </div>
           <div className="form-card">
             <div className="contact-form-heading">
