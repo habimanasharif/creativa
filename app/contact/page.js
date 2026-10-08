@@ -26,14 +26,6 @@ export default function Contact() {
               Contact us for a consultation, care questions or caregiver
               opportunities.
             </p>
-            <div className="contact-map">
-              <iframe
-                title="Creativa Care location map"
-                src="https://www.google.com/maps?q=162%20Briceland%2C%20Kingston%2C%20ON&output=embed"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
             <div className="contact-item">
               <div className="service-icon">
                 <MapPin size={18} />
@@ -63,6 +55,14 @@ export default function Contact() {
                 <br />
                 <a href="mailto:info@creativacare.ca">info@creativacare.ca</a>
               </div>
+            </div>
+            <div className="contact-map">
+              <iframe
+                title="Creativa Care location map"
+                src="https://www.google.com/maps?q=162%20Briceland%2C%20Kingston%2C%20ON&output=embed"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
             <div className="notice">
               Service area: Kingston and surrounding areas.
