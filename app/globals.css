@@ -1471,3 +1471,39 @@ select {
     margin: 12px 0;
   }
 }
+
+/* Contact details above the map, displayed inline */
+.contact-card .contact-map {
+  margin-top: 20px;
+  margin-bottom: 0;
+  height: 190px;
+}
+.contact-card .contact-item,
+.contact-card .contact-item:nth-of-type(3) {
+  display: inline-flex;
+  width: auto;
+  vertical-align: top;
+  margin: 18px 28px 8px 0;
+  align-items: center;
+}
+.contact-card .contact-item .service-icon {
+  margin-bottom: 0;
+}
+@media (max-width: 900px) and (min-width: 761px) {
+  .contact-card .contact-item,
+  .contact-card .contact-item:nth-of-type(3) {
+    margin-right: 14px;
+  }
+}
+@media (max-width: 760px) {
+  .contact-card .contact-item,
+  .contact-card .contact-item:nth-of-type(3) {
+    display: flex;
+    width: 100%;
+    margin: 12px 0;
+  }
+  .contact-card .contact-map {
+    height: 210px;
+    margin-top: 16px;
+  }
+}
