@@ -6,7 +6,7 @@ export default function Contact() {
   const [sent, setSent] = useState(false);
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero contact-page-hero">
         <div className="container">
           <span className="eyebrow" style={{ color: "#c6e8df" }}>
             LET'S CONNECT
@@ -56,11 +56,20 @@ export default function Contact() {
                 <a href="mailto:info@creativacare.ca">info@creativacare.ca</a>
               </div>
             </div>
-            <div className="notice">
-              Service area: Kingston and surrounding areas.
+            <div className="contact-map">
+              <iframe
+                title="Creativa Care location map"
+                src="https://www.google.com/maps?q=162%20Briceland%2C%20Kingston%2C%20ON&output=embed"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
           <div className="form-card">
+            <div className="contact-form-heading">
+              <span className="eyebrow">SEND A MESSAGE</span>
+              <h3>Let's talk about your care needs.</h3>
+            </div>
             {sent ? (
               <div className="center" style={{ padding: "60px 20px" }}>
                 <div className="service-icon" style={{ margin: "0 auto 15px" }}>
