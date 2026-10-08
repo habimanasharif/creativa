@@ -1048,3 +1048,16 @@ select {
   .stat-item:last-child { border-right: 0; }
   .stat-box strong { font-size: 18px; }
 }
+
+
+/* Final reference-tuning pass */
+@media (min-width: 761px) {
+  .hero-copy p {
+    max-width: 455px;
+    line-height: 1.55;
+  }
+  .care-section {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+}
