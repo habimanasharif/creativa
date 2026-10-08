@@ -843,6 +843,7 @@ select {
   min-height: 590px;
   border-radius: 0;
   margin-left: -90px;
+  margin-right: calc((1160px - 100vw) / 2);
   box-shadow: none;
   background-image: url("https://images.openai.com/static-rsc-4/2R8gIcLKXlNl93KAcJRewGTx2IGqX_Hn1vFSGi6768iSguIdk8yFqU-G--Ugr75NL_wPcWSGJB942vBO4iPUjn2LIjhL2WmaadoRVwiEhIfJRQ1EIvSX3wJB9NUkgAXx4n08HaBeFXlWbanI1R5qcdxIQtXpKseZW7BBqehKa2Xtni8qJcD7Pq_AgCQOCJl2?purpose=fullsize");
 }
