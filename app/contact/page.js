@@ -26,6 +26,14 @@ export default function Contact() {
               Contact us for a consultation, care questions or caregiver
               opportunities.
             </p>
+            <div className="contact-map">
+              <iframe
+                title="Creativa Care location map"
+                src="https://www.google.com/maps?q=162%20Briceland%2C%20Kingston%2C%20ON&output=embed"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
             <div className="contact-item">
               <div className="service-icon">
                 <MapPin size={18} />
@@ -61,14 +69,6 @@ export default function Contact() {
             </div>
           </div>
           <div className="form-card">
-            <div className="contact-map">
-              <iframe
-                title="Creativa Care location map"
-                src="https://www.google.com/maps?q=162%20Briceland%2C%20Kingston%2C%20ON&output=embed"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
             <div className="contact-form-heading">
               <span className="eyebrow">SEND A MESSAGE</span>
               <h3>Let's talk about your care needs.</h3>
