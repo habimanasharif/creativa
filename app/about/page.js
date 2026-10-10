@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "About Creativa Care",
+  description:
+    "Learn about Creativa Care's mission to support dignity, independence and comfort through personalized non-medical home care in Kingston, Ontario.",
+  alternates: { canonical: "/about/" },
+};
+
 import {
   HeartHandshake,
   ShieldCheck,
