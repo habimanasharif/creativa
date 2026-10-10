@@ -1,11 +1,9 @@
 import {
   HeartHandshake,
   ShieldCheck,
-  Sparkles,
   HandHeart,
   Compass,
   Heart,
-  Shield,
   CircleUserRound,
 } from "lucide-react";
 
