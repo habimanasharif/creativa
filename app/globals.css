@@ -1905,7 +1905,7 @@ a.contact-info-card:hover {
   align-items: center;
   background:
     linear-gradient(90deg, rgba(0, 63, 58, .88) 0%, rgba(0, 63, 58, .64) 42%, rgba(0, 63, 58, .12) 78%),
-    url("https://images.pexels.com/photos/34328480/pexels-photo-34328480.jpeg?auto=compress&cs=tinysrgb&w=1800")
+    url("https://images.pexels.com/photos/7551609/pexels-photo-7551609.jpeg?auto=compress&cs=tinysrgb&w=1800")
       center 42% / cover;
 }
 .services-page-hero .container {
@@ -1927,7 +1927,7 @@ a.contact-info-card:hover {
     padding: 42px 0;
     background:
       linear-gradient(180deg, rgba(0, 63, 58, .72) 0%, rgba(0, 63, 58, .9) 100%),
-      url("https://images.pexels.com/photos/34328480/pexels-photo-34328480.jpeg?auto=compress&cs=tinysrgb&w=1800")
+      url("https://images.pexels.com/photos/7551609/pexels-photo-7551609.jpeg?auto=compress&cs=tinysrgb&w=1800")
         center / cover;
   }
   .services-page-hero h1 {
