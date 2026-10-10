@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "Support for Family Caregivers in Kingston",
+  description:
+    "Discover how Creativa Care helps families in Kingston, Ontario with respite support, companionship and everyday non-medical care for loved ones.",
+  alternates: { canonical: "/for-families/" },
+};
+
 import Link from "next/link";
 import CTA from "@/components/CTA";
 const cards = [
