@@ -57,7 +57,7 @@ const list = [
 export default function Services() {
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero services-page-hero">
         <div className="container">
           <span className="eyebrow" style={{ color: "#c6e8df" }}>
             WHAT WE DO
@@ -76,6 +76,19 @@ export default function Services() {
             {list.map((x) => (
               <ServiceCard key={x.slug} {...x} />
             ))}
+          </div>
+        </div>
+      </section>
+      <section className="section personalized-care-section">
+        <div className="container">
+          <div className="personalized-care-card">
+            <div className="personalized-care-photo" role="img" aria-label="A caregiver spending time with an older adult" />
+            <div className="personalized-care-copy">
+              <span className="eyebrow">CARE THAT FITS YOUR LIFE</span>
+              <h2>Personalized Care Plans</h2>
+              <p>Every client is unique. We create care plans tailored to your specific needs, preferences and lifestyle.</p>
+              <a className="btn btn-small" href="/contact">Get Started</a>
+            </div>
           </div>
         </div>
       </section>

@@ -1,82 +1,131 @@
-import CTA from "@/components/CTA";
-import Link from "next/link";
+import {
+  HeartHandshake,
+  ShieldCheck,
+  HandHeart,
+  Compass,
+  Heart,
+  CircleUserRound,
+  MapPin,
+  Phone,
+  ArrowUpRight,
+  ArrowRight,
+} from "lucide-react";
+
+const coreValues = [
+  { icon: Heart, label: "Compassion", tone: "coral" },
+  { icon: HandHeart, label: "Dignity", tone: "cyan" },
+  { icon: HeartHandshake, label: "Reliability", tone: "green" },
+  { icon: ShieldCheck, label: "Safety", tone: "blue" },
+];
+
 export default function About() {
   return (
-    <>
-      <section className="page-hero">
-        <div className="container">
-          <span className="eyebrow" style={{ color: "#c6e8df" }}>
-            CREATIVA CARE
-          </span>
+    <main className="about-reference-page">
+      <section className="about-reference-hero">
+        <div className="about-reference-hero-image" />
+        <div className="about-reference-hero-overlay" />
+        <div className="about-reference-hero-copy">
           <h1>About Us</h1>
           <p>Compassion. Dignity. Independence.</p>
+          <div className="about-reference-hero-meta"><span><MapPin size={14} /> Kingston, Ontario</span><span><Phone size={14} /> 613-583-7320</span></div>
         </div>
       </section>
-      <section className="section">
-        <div className="container content-grid">
-          <img
-            src="https://images.unsplash.com/photo-1559234938-b60fff04894d?auto=format&fit=crop&w=1000&q=85"
-            alt="Caregiver supporting senior"
-          />
-          <div className="content">
-            <span className="eyebrow">OUR STORY</span>
-            <h2>Helping people live well at home.</h2>
-            <p>
-              Creativa Care is a non-medical home care agency focused on helping
-              seniors and individuals receive dependable support in familiar
-              surroundings.
-            </p>
-            <p>
-              Our approach combines practical assistance with meaningful human
-              connection, while respecting each client's routines, choices and
-              dignity.
-            </p>
-            <Link className="btn" href="/contact">
-              Talk to Our Team
-            </Link>
+
+      <section className="about-reference-content">
+        <div className="about-reference-story">
+          <h2>Our Story</h2>
+          <p>
+            Creativa Care was founded with a simple belief — that everyone
+            deserves to age with dignity, comfort and independence. We saw a
+            growing need in our community for reliable, non-medical home care
+            services that truly put people first.
+          </p>
+          <p>
+            Today, we are proud to support seniors and individuals in Kingston
+            and the surrounding areas, helping them live safely and comfortably
+            in the place they love most — their home.
+          </p>
+          <div className="about-reference-map">
+            <iframe
+              title="Map showing Creativa Care's service area in Kingston, Ontario"
+              src="https://maps.google.com/maps?q=162%20Briceland%2C%20Kingston%2C%20ON&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+            <a
+              className="about-reference-map-link"
+              href="https://www.google.com/maps/search/?api=1&query=162%20Briceland%2C%20Kingston%2C%20ON"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <MapPin size={15} /> Explore Kingston on Maps <ArrowUpRight size={14} />
+            </a>
+          </div>
+          <div className="about-reference-contact-note">
+            <span className="about-reference-contact-icon"><MapPin size={17} /></span>
+            <span><strong>Rooted in the Kingston community</strong><small>Serving Kingston and surrounding areas</small></span>
+            <a href="/contact" aria-label="Contact Creativa Care"><ArrowUpRight size={17} /></a>
           </div>
         </div>
-      </section>
-      <section className="section" style={{ background: "#fff" }}>
-        <div className="container content-grid">
-          <div className="content">
-            <span className="eyebrow">MISSION & VISION</span>
-            <h2>A person-centered approach.</h2>
-            <p>
-              <strong>Mission:</strong> To deliver compassionate, high-quality
-              non-medical home care that empowers clients to maintain
-              independence, dignity and comfort.
-            </p>
-            <p>
-              <strong>Vision:</strong> To be a trusted provider of home support
-              and companionship in Kingston and surrounding communities.
-            </p>
-            <div className="values">
-              <div className="value">
-                <strong>Compassion</strong>
-                <span>Treating every client with empathy and kindness.</span>
-              </div>
-              <div className="value">
-                <strong>Dignity</strong>
-                <span>Respecting autonomy, privacy and self-esteem.</span>
-              </div>
-              <div className="value">
-                <strong>Reliability</strong>
-                <span>Providing dependable and professional support.</span>
-              </div>
-              <div className="value">
-                <strong>Safety</strong>
-                <span>Supporting a secure home environment.</span>
-              </div>
+
+        <aside className="about-reference-principles" aria-label="Our mission, vision and core values">
+          <section className="about-reference-principle">
+            <span className="about-reference-principle-icon"><CircleUserRound size={23} /></span>
+            <div>
+              <h3>Our Mission</h3>
+              <p>
+                To deliver compassionate, high-quality, non-medical home care
+                services that empower clients to maintain their independence,
+                dignity and comfort within their own homes.
+              </p>
             </div>
-          </div>
-          <img
-            src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1000&q=85"
-            alt="Community and care"
-          />
+          </section>
+
+          <section className="about-reference-principle">
+            <span className="about-reference-principle-icon"><Compass size={23} /></span>
+            <div>
+              <h3>Our Vision</h3>
+              <p>
+                To be the most trusted and reliable provider of home support
+                and companionship in Kingston and surrounding regions,
+                recognised for our person-centred approach and dedication to
+                community wellbeing.
+              </p>
+            </div>
+          </section>
+
+          <section className="about-reference-values">
+            <div className="about-reference-values-heading">
+              <span className="about-reference-principle-icon"><HandHeart size={23} /></span>
+              <h3>Our Core Values</h3>
+            </div>
+            <ul>
+              {coreValues.map(({ icon: Icon, label, tone }) => (
+                <li key={label}>
+                  <span className={`about-reference-value-icon ${tone}`}><Icon size={14} fill="currentColor" /></span>
+                  <span>{label}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </aside>
+      </section>
+
+      <section className="about-reference-cta" aria-labelledby="about-reference-cta-title">
+        <div className="about-reference-cta-photo" />
+        <div className="about-reference-cta-content">
+          <p className="about-reference-cta-eyebrow">CARE THAT FEELS LIKE HOME</p>
+          <h2 id="about-reference-cta-title">Personalized Care Plans</h2>
+          <p>
+            Every client is unique. We create care plans tailored to your
+            needs, preferences and lifestyle.
+          </p>
+          <a className="about-reference-cta-button" href="/contact">
+            Get Started <ArrowRight size={16} />
+          </a>
         </div>
       </section>
-      <CTA />
-    </>
+    </main>
   );
 }
