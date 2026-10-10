@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "Home Care in Kingston, Ontario",
+  description:
+    "Find compassionate non-medical home care in Kingston, Ontario. Creativa Care offers personalized personal care, companionship, respite support and light housekeeping.",
+  alternates: { canonical: "/" },
+};
+
 import Link from "next/link";
 import {
   HeartHandshake,
