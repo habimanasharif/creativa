@@ -1552,3 +1552,42 @@ select {
     width: 100%;
   }
 }
+
+
+/* Services page hero banner, following the Contact page treatment */
+.services-page-hero {
+  min-height: 300px;
+  padding: 48px 0;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(0, 63, 58, .88) 0%, rgba(0, 63, 58, .64) 42%, rgba(0, 63, 58, .12) 78%),
+    url("https://images.openai.com/static-rsc-4/2R8gIcLKXlNl93KAcJRewGTx2IGqX_Hn1vFSGi6768iSguIdk8yFqU-G--Ugr75NL_wPcWSGJB942vBO4iPUjn2LIjhL2WmaadoRVwiEhIfJRQ1EIvSX3wJB9NUkgAXx4n08HaBeFXlWbanI1R5qcdxIQtXpKseZW7BBqehKa2Xtni8qJcD7Pq_AgCQOCJl2?purpose=fullsize")
+      center 42% / cover;
+}
+.services-page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+.services-page-hero h1 {
+  font-size: clamp(42px, 5vw, 58px);
+  margin-top: 10px;
+  max-width: 520px;
+}
+.services-page-hero p {
+  max-width: 520px;
+  font-size: 15px;
+}
+@media (max-width: 760px) {
+  .services-page-hero {
+    min-height: 300px;
+    padding: 42px 0;
+    background:
+      linear-gradient(180deg, rgba(0, 63, 58, .72) 0%, rgba(0, 63, 58, .9) 100%),
+      url("https://images.openai.com/static-rsc-4/2R8gIcLKXlNl93KAcJRewGTx2IGqX_Hn1vFSGi6768iSguIdk8yFqU-G--Ugr75NL_wPcWSGJB942vBO4iPUjn2LIjhL2WmaadoRVwiEhIfJRQ1EIvSX3wJB9NUkgAXx4n08HaBeFXlWbanI1R5qcdxIQtXpKseZW7BBqehKa2Xtni8qJcD7Pq_AgCQOCJl2?purpose=fullsize")
+        center / cover;
+  }
+  .services-page-hero h1 {
+    font-size: clamp(38px, 10vw, 50px);
+  }
+}
