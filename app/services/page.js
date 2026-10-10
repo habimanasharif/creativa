@@ -57,7 +57,7 @@ const list = [
 export default function Services() {
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero services-page-hero">
         <div className="container">
           <span className="eyebrow" style={{ color: "#c6e8df" }}>
             WHAT WE DO
