@@ -15,8 +15,8 @@ import {
   MapPin,
   Phone,
   ArrowUpRight,
-  ArrowRight,
 } from "lucide-react";
+import CTA from "@/components/CTA";
 
 const coreValues = [
   { icon: Heart, label: "Compassion", tone: "coral" },
@@ -119,20 +119,7 @@ export default function About() {
         </aside>
       </section>
 
-      <section className="about-reference-cta" aria-labelledby="about-reference-cta-title">
-        <div className="about-reference-cta-photo" />
-        <div className="about-reference-cta-content">
-          <p className="about-reference-cta-eyebrow">CARE THAT FEELS LIKE HOME</p>
-          <h2 id="about-reference-cta-title">Personalized Care Plans</h2>
-          <p>
-            Every client is unique. We create care plans tailored to your
-            needs, preferences and lifestyle.
-          </p>
-          <a className="about-reference-cta-button" href="/contact">
-            Get Started <ArrowRight size={16} />
-          </a>
-        </div>
-      </section>
+      <CTA />
     </main>
   );
 }
