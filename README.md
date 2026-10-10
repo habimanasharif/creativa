@@ -38,6 +38,11 @@ npm run dev
 - Replace the placeholder email/social links.
 - Add real testimonials only with client permission.
 
-## GitHub Pages
+## Deploy on Vercel
 
-A Next.js App Router site with a dynamic server setup is easiest to deploy on Vercel. If you specifically need GitHub Pages, configure a static export and avoid server-only features/API routes.
+This site is set up for Vercel’s Next.js runtime.
+
+1. Push `main` to GitHub.
+2. Import the repo at [vercel.com/new](https://vercel.com/new).
+3. Leave the default Next.js build settings (`npm run build`).
+4. Deploy. Production will be available on the assigned `*.vercel.app` URL, and you can attach `creativacare.ca` in the Vercel project domains settings.
