@@ -1860,3 +1860,38 @@ a.contact-info-card:hover {
   .contact-social-block h3 { font-size: 25px; }
   .contact-map-card { height: 220px; }
 }
+
+
+/* Definitively center the homepage care process section */
+.process-section > .container {
+  width: min(1500px, calc(100% - 80px));
+  margin-inline: auto;
+}
+.process-section .section-heading {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+.process-section .process-grid {
+  width: 100%;
+  max-width: 1500px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+}
+.process-section .process-card {
+  min-width: 0;
+}
+@media (max-width: 760px) {
+  .process-section > .container {
+    width: min(100% - 28px, 600px);
+  }
+  .process-section .section-heading {
+    margin-bottom: 34px;
+  }
+  .process-section .process-grid {
+    grid-template-columns: 1fr;
+  }
+}
