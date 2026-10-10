@@ -5,10 +5,10 @@ import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
 
 const links = [
-  ["About", "/about"],
+  ["Home", "/"],
   ["Services", "/services"],
-  ["For Families", "/for-families"],
   ["Contact", "/contact"],
+  ["About", "/about"],
 ];
 
 export default function Header() {
