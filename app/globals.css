@@ -1562,7 +1562,7 @@ select {
   align-items: center;
   background:
     linear-gradient(90deg, rgba(0, 63, 58, .88) 0%, rgba(0, 63, 58, .64) 42%, rgba(0, 63, 58, .12) 78%),
-    url("https://images.openai.com/static-rsc-4/2R8gIcLKXlNl93KAcJRewGTx2IGqX_Hn1vFSGi6768iSguIdk8yFqU-G--Ugr75NL_wPcWSGJB942vBO4iPUjn2LIjhL2WmaadoRVwiEhIfJRQ1EIvSX3wJB9NUkgAXx4n08HaBeFXlWbanI1R5qcdxIQtXpKseZW7BBqehKa2Xtni8qJcD7Pq_AgCQOCJl2?purpose=fullsize")
+    url("https://images.pexels.com/photos/34328480/pexels-photo-34328480.jpeg?auto=compress&cs=tinysrgb&w=1800")
       center 42% / cover;
 }
 .services-page-hero .container {
@@ -1584,7 +1584,7 @@ select {
     padding: 42px 0;
     background:
       linear-gradient(180deg, rgba(0, 63, 58, .72) 0%, rgba(0, 63, 58, .9) 100%),
-      url("https://images.openai.com/static-rsc-4/2R8gIcLKXlNl93KAcJRewGTx2IGqX_Hn1vFSGi6768iSguIdk8yFqU-G--Ugr75NL_wPcWSGJB942vBO4iPUjn2LIjhL2WmaadoRVwiEhIfJRQ1EIvSX3wJB9NUkgAXx4n08HaBeFXlWbanI1R5qcdxIQtXpKseZW7BBqehKa2Xtni8qJcD7Pq_AgCQOCJl2?purpose=fullsize")
+      url("https://images.pexels.com/photos/34328480/pexels-photo-34328480.jpeg?auto=compress&cs=tinysrgb&w=1800")
         center / cover;
   }
   .services-page-hero h1 {
