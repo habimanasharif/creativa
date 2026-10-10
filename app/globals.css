@@ -2871,3 +2871,100 @@ a.contact-info-card:hover {
 @media (max-width: 760px) {
   .about-reference-map { height: 220px; }
 }
+
+
+/* Bottom personalized-care banner inspired by the supplied reference */
+.about-reference-cta {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  width: min(1120px, calc(100% - 56px));
+  min-height: 190px;
+  margin: 28px auto 0;
+  overflow: hidden;
+  border: 1px solid #d8e8df;
+  border-radius: 12px;
+  background: #9fc7bd;
+  box-shadow: 0 8px 24px rgba(20,64,57,.08);
+}
+.about-reference-cta-photo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: url("https://images.pexels.com/photos/7551654/pexels-photo-7551654.jpeg?auto=compress&cs=tinysrgb&w=1800");
+  background-size: cover;
+  background-position: center 42%;
+}
+.about-reference-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(11,58,50,.06) 0%, rgba(155,194,184,.84) 36%, rgba(155,194,184,.96) 100%);
+}
+.about-reference-cta-content {
+  width: 58%;
+  margin-left: 42%;
+  padding: 26px 34px 27px 18px;
+}
+.about-reference-cta-eyebrow {
+  margin: 0 0 7px;
+  color: #07574f;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+.about-reference-cta-content h2 {
+  margin: 0 0 8px;
+  color: #164640;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(23px, 2.4vw, 31px);
+  line-height: 1.16;
+  letter-spacing: -.02em;
+}
+.about-reference-cta-content > p:not(.about-reference-cta-eyebrow) {
+  max-width: 430px;
+  margin: 0 0 15px;
+  color: #456b64;
+  font-size: 12px;
+  line-height: 1.55;
+}
+.about-reference-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #07574f;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 3px 9px rgba(7,87,79,.15);
+  transition: background .2s ease, transform .2s ease;
+}
+.about-reference-cta-button:hover {
+  background: #003f39;
+  transform: translateY(-1px);
+}
+@media (max-width: 760px) {
+  .about-reference-cta {
+    width: calc(100% - 24px);
+    min-height: 270px;
+    align-items: end;
+    margin-top: 22px;
+  }
+  .about-reference-cta-photo {
+    background-position: 35% center;
+  }
+  .about-reference-cta::before {
+    background: linear-gradient(0deg, rgba(155,194,184,.98) 0%, rgba(155,194,184,.92) 47%, rgba(11,58,50,.02) 100%);
+  }
+  .about-reference-cta-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 95px 20px 22px;
+  }
+  .about-reference-cta-content h2 { font-size: 26px; }
+}
