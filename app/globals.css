@@ -1993,6 +1993,8 @@ a.contact-info-card:hover {
       url("https://images.pexels.com/photos/7551609/pexels-photo-7551609.jpeg?auto=compress&cs=tinysrgb&w=1200") center 38% / cover;
   }
   .personalized-care-copy { padding: 22px 22px 26px; }
+}
+
 /* About page redesign: editorial photography, clear storytelling, and value cards */
 .about-redesign-hero {
   min-height: 500px;
