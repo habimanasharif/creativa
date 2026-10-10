@@ -3,6 +3,17 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { services } from "@/data";
 import CTA from "@/components/CTA";
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const service = services[slug];
+  if (!service) return { title: "Service Not Found", robots: { index: false, follow: true } };
+  return {
+    title: `${service.title} in Kingston, Ontario`,
+    description: `${service.description} Explore personalized non-medical ${service.title.toLowerCase()} from Creativa Care in Kingston, Ontario.`,
+    alternates: { canonical: `/services/${slug}/` },
+  };
+}
+
 export function generateStaticParams() {
   return Object.keys(services).map((slug) => ({ slug }));
 }
