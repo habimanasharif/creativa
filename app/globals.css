@@ -1591,3 +1591,63 @@ select {
     font-size: clamp(38px, 10vw, 50px);
   }
 }
+
+
+/* Personalized care plan banner on the Services page */
+.personalized-care-section {
+  padding-top: 24px;
+  padding-bottom: 80px;
+  background: #fff;
+}
+.personalized-care-card {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  min-height: 245px;
+  overflow: hidden;
+  border: 1px solid #d3e4de;
+  border-radius: 18px;
+  background: linear-gradient(105deg, #d8e9e3 0%, #a9c9c0 100%);
+  box-shadow: 0 12px 30px rgba(0, 63, 58, .08);
+}
+.personalized-care-photo {
+  min-height: 245px;
+  background:
+    linear-gradient(90deg, rgba(216,233,227,0) 55%, rgba(216,233,227,.28) 78%, #d8e9e3 100%),
+    url("https://images.pexels.com/photos/7551609/pexels-photo-7551609.jpeg?auto=compress&cs=tinysrgb&w=1200") center 38% / cover;
+}
+.personalized-care-copy {
+  align-self: center;
+  padding: 32px clamp(24px, 4vw, 54px);
+}
+.personalized-care-copy .eyebrow {
+  color: #356c63;
+  font-size: 9px;
+}
+.personalized-care-copy h2 {
+  margin: 5px 0 8px;
+  color: #164c45;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.12;
+}
+.personalized-care-copy p {
+  max-width: 470px;
+  margin: 0 0 18px;
+  color: #41645e;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.personalized-care-copy .btn {
+  padding: 10px 20px;
+}
+@media (max-width: 760px) {
+  .personalized-care-section { padding-top: 8px; padding-bottom: 58px; }
+  .personalized-care-card { grid-template-columns: 1fr; }
+  .personalized-care-photo {
+    min-height: 220px;
+    background:
+      linear-gradient(180deg, rgba(216,233,227,0) 55%, #d8e9e3 100%),
+      url("https://images.pexels.com/photos/7551609/pexels-photo-7551609.jpeg?auto=compress&cs=tinysrgb&w=1200") center 38% / cover;
+  }
+  .personalized-care-copy { padding: 22px 22px 26px; }
+}
