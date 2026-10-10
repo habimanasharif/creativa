@@ -327,6 +327,7 @@ select {
 }
 .process-grid {
   display: grid;
+  padding-left: 100px;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
