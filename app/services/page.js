@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "Non-Medical Home Care Services in Kingston",
+  description:
+    "Explore Creativa Care services in Kingston, Ontario: personal care, companionship, light housekeeping and respite support tailored to everyday needs.",
+  alternates: { canonical: "/services/" },
+};
+
 import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
 import CTA from "@/components/CTA";
