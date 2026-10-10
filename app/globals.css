@@ -2629,3 +2629,197 @@ a.contact-info-card:hover {
   .about-reference-kingston { height: 210px; }
   .about-reference-principles { gap: 23px; }
 }
+
+
+/* Final polish for the About page: stronger hierarchy and useful local contact details */
+.about-reference-page {
+  padding-bottom: 48px;
+  background: #f7f6f0;
+}
+.about-reference-hero {
+  min-height: 255px;
+}
+.about-reference-hero-image {
+  background-position: center 40%;
+}
+.about-reference-hero-overlay {
+  background: linear-gradient(90deg, rgba(7,45,40,.82) 0%, rgba(7,45,40,.61) 34%, rgba(7,45,40,.14) 72%, rgba(7,45,40,.04) 100%);
+}
+.about-reference-hero-copy {
+  width: min(1120px, calc(100% - 56px));
+  padding: 42px 0;
+}
+.about-reference-hero-copy h1 {
+  font-size: clamp(42px, 4.2vw, 54px);
+  letter-spacing: -.035em;
+}
+.about-reference-hero-copy p {
+  font-size: 15px;
+  letter-spacing: .015em;
+}
+.about-reference-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.about-reference-hero-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+}
+.about-reference-content {
+  width: min(1120px, calc(100% - 56px));
+  padding: 34px 36px 32px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .95fr);
+  gap: 36px;
+  border: 1px solid #e6e8df;
+  border-radius: 0 0 14px 14px;
+  box-shadow: 0 12px 34px rgba(20,64,57,.055);
+}
+.about-reference-story {
+  padding-right: 34px;
+}
+.about-reference-story h2 {
+  font-size: 29px;
+  margin-bottom: 13px;
+}
+.about-reference-story p {
+  font-size: 13px;
+  line-height: 1.72;
+  margin-bottom: 14px;
+}
+.about-reference-kingston {
+  height: 184px;
+  margin-top: 18px;
+  border-radius: 9px;
+  transition: filter .2s ease;
+}
+.about-reference-kingston:hover {
+  filter: saturate(1.08);
+}
+.about-reference-contact-note {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 15px;
+  padding: 12px;
+  border: 1px solid #e0e9e3;
+  border-radius: 10px;
+  background: #f6faf6;
+}
+.about-reference-contact-icon {
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+  border-radius: 50%;
+  background: #dff1e8;
+  color: #07574f;
+}
+.about-reference-contact-note > span:nth-child(2) {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.about-reference-contact-note strong {
+  color: #174b44;
+  font-size: 11px;
+}
+.about-reference-contact-note small {
+  color: #6d837c;
+  font-size: 10px;
+}
+.about-reference-contact-note a {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  flex: 0 0 31px;
+  margin-left: auto;
+  border-radius: 50%;
+  background: #07574f;
+  color: white;
+  transition: transform .2s ease, background .2s ease;
+}
+.about-reference-contact-note a:hover {
+  transform: translate(2px, -2px);
+  background: #003f39;
+}
+.about-reference-principles {
+  gap: 25px;
+  padding-top: 3px;
+}
+.about-reference-principle {
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 13px;
+}
+.about-reference-principle-icon {
+  width: 31px;
+  height: 31px;
+  border-width: 1.5px;
+  background: #fbfdf9;
+}
+.about-reference-principle h3,
+.about-reference-values h3 {
+  font-size: 18px;
+  margin-top: 3px;
+  margin-bottom: 8px;
+}
+.about-reference-principle p {
+  font-size: 12.5px;
+  line-height: 1.68;
+  color: #5c756f;
+}
+.about-reference-values {
+  padding-top: 2px;
+}
+.about-reference-values-heading {
+  gap: 13px;
+  margin-bottom: 12px;
+}
+.about-reference-values ul {
+  gap: 10px;
+  padding-left: 44px;
+}
+.about-reference-values li {
+  font-size: 12px;
+}
+.about-reference-value-icon {
+  width: 19px;
+  height: 19px;
+}
+@media (max-width: 760px) {
+  .about-reference-page { padding-bottom: 28px; }
+  .about-reference-hero { min-height: 245px; }
+  .about-reference-hero-overlay {
+    background: linear-gradient(0deg, rgba(7,45,40,.82) 0%, rgba(7,45,40,.25) 100%);
+  }
+  .about-reference-hero-copy {
+    width: calc(100% - 36px);
+    padding: 84px 0 25px;
+  }
+  .about-reference-hero-copy h1 { font-size: 40px; }
+  .about-reference-hero-meta { gap: 7px; margin-top: 15px; }
+  .about-reference-hero-meta span { font-size: 10px; padding: 7px 9px; }
+  .about-reference-content {
+    width: calc(100% - 24px);
+    padding: 24px 18px 22px;
+    gap: 24px;
+  }
+  .about-reference-story { padding-bottom: 23px; }
+  .about-reference-story h2 { font-size: 27px; }
+  .about-reference-kingston { height: 205px; }
+  .about-reference-contact-note { padding: 10px; }
+  .about-reference-principles { gap: 23px; }
+}
