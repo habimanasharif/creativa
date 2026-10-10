@@ -5,6 +5,9 @@ import {
   Compass,
   Heart,
   CircleUserRound,
+  MapPin,
+  Phone,
+  ArrowUpRight,
 } from "lucide-react";
 
 const coreValues = [
@@ -23,6 +26,7 @@ export default function About() {
         <div className="about-reference-hero-copy">
           <h1>About Us</h1>
           <p>Compassion. Dignity. Independence.</p>
+          <div className="about-reference-hero-meta"><span><MapPin size={14} /> Kingston, Ontario</span><span><Phone size={14} /> 613-583-7320</span></div>
         </div>
       </section>
 
@@ -45,6 +49,11 @@ export default function About() {
             src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1000&q=85"
             alt="Waterfront cityscape with historic buildings"
           />
+          <div className="about-reference-contact-note">
+            <span className="about-reference-contact-icon"><MapPin size={17} /></span>
+            <span><strong>Rooted in the Kingston community</strong><small>Serving Kingston and surrounding areas</small></span>
+            <a href="/contact" aria-label="Contact Creativa Care"><ArrowUpRight size={17} /></a>
+          </div>
         </div>
 
         <aside className="about-reference-principles" aria-label="Our mission, vision and core values">
