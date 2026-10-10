@@ -2968,3 +2968,24 @@ a.contact-info-card:hover {
   }
   .about-reference-cta-content h2 { font-size: 26px; }
 }
+
+
+/* Keep footer contact icons, labels, and linked details aligned on one row */
+.footer-grid > div:last-child p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.5;
+}
+.footer-grid > div:last-child p > svg {
+  flex: 0 0 15px;
+  margin-top: 0;
+}
+.footer-grid > div:last-child p a {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
