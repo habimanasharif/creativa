@@ -44,11 +44,23 @@ export default function About() {
             and the surrounding areas, helping them live safely and comfortably
             in the place they love most — their home.
           </p>
-          <img
-            className="about-reference-kingston"
-            src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1000&q=85"
-            alt="Waterfront cityscape with historic buildings"
-          />
+          <div className="about-reference-map">
+            <iframe
+              title="Map showing Creativa Care's service area in Kingston, Ontario"
+              src="https://maps.google.com/maps?q=162%20Briceland%2C%20Kingston%2C%20ON&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+            <a
+              className="about-reference-map-link"
+              href="https://www.google.com/maps/search/?api=1&query=162%20Briceland%2C%20Kingston%2C%20ON"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <MapPin size={15} /> Explore Kingston on Maps <ArrowUpRight size={14} />
+            </a>
+          </div>
           <div className="about-reference-contact-note">
             <span className="about-reference-contact-icon"><MapPin size={17} /></span>
             <span><strong>Rooted in the Kingston community</strong><small>Serving Kingston and surrounding areas</small></span>
