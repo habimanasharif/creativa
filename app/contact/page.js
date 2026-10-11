@@ -14,6 +14,8 @@ import CTA from "@/components/CTA";
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   return (
     <>
@@ -41,8 +43,7 @@ export default function Contact() {
                 <CheckCircle2 size={42} />
                 <h3>Thank you for reaching out.</h3>
                 <p>
-                  Your message has been recorded in this demo. Please connect
-                  the form to your email or CRM before launch.
+                  Your message has been sent to our team. We’ll be in touch soon.
                 </p>
                 <button className="btn" onClick={() => setSent(false)}>
                   Send Another Message
@@ -51,9 +52,27 @@ export default function Contact() {
             ) : (
               <form
                 className="contact-redesign-form"
-                onSubmit={(event) => {
+                onSubmit={async (event) => {
                   event.preventDefault();
-                  setSent(true);
+                  setSending(true);
+                  setSubmitError("");
+                  const form = event.currentTarget;
+                  const payload = Object.fromEntries(new FormData(form).entries());
+                  try {
+                    const response = await fetch("/api/contact", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify(payload),
+                    });
+                    const result = await response.json().catch(() => ({}));
+                    if (!response.ok) throw new Error(result.error || "We couldn’t send your message. Please try again or email us directly.");
+                    setSent(true);
+                    form.reset();
+                  } catch (error) {
+                    setSubmitError(error.message || "We couldn’t send your message. Please try again.");
+                  } finally {
+                    setSending(false);
+                  }
                 }}
               >
                 <div className="contact-form-fields">
@@ -87,9 +106,10 @@ export default function Contact() {
                     <textarea id="contact-message" name="message" required placeholder="Tell us a little more about what you’re looking for..." />
                   </div>
                   <div className="contact-field-full">
-                    <button className="btn contact-submit" type="submit">
-                      <Mail size={18} /> Send Message
+                    <button className="btn contact-submit" type="submit" disabled={sending}>
+                      <Mail size={18} /> {sending ? "Sending..." : "Send Message"}
                     </button>
+                    {submitError && <p className="contact-submit-error" role="alert">{submitError}</p>}
                     <p className="contact-privacy-note">Your information will only be used to respond to your inquiry.</p>
                   </div>
                 </div>
