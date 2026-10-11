@@ -3501,3 +3501,12 @@ a.contact-info-card:hover {
     text-align: center;
   }
 }
+
+
+/* The process grid's desktop offset must never affect mobile layouts. */
+@media (max-width: 760px) {
+  .process-section .process-grid,
+  .process-grid {
+    padding-left: 0 !important;
+  }
+}
