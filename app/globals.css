@@ -3120,3 +3120,152 @@ a.contact-info-card:hover {
     font-size: 20px;
   }
 }
+
+
+/* Home page: make the How Our Care Works steps feel intentional on phones */
+@media (max-width: 760px) {
+  .process-section {
+    padding: 56px 0 54px;
+    overflow: hidden;
+  }
+
+  .process-section .container {
+    width: 100%;
+    max-width: 560px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .process-section .section-heading,
+  .process-section .section-heading p,
+  .process-section .section-heading h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .process-section .section-heading p {
+    max-width: 34ch;
+    font-size: 16px;
+    line-height: 1.6;
+    text-wrap: pretty;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    margin-top: 30px;
+  }
+
+  .process-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr);
+    grid-template-areas:
+      "top title"
+      "top description";
+    align-items: center;
+    column-gap: 17px;
+    row-gap: 5px;
+    min-width: 0;
+    padding: 19px 18px;
+    border: 1px solid #e0e9e3;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .78);
+    box-shadow: 0 5px 18px rgba(20, 64, 57, .045);
+    text-align: left;
+  }
+
+  .process-top {
+    grid-area: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .process-card .step {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  .process-icon {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d8e8e2;
+    border-radius: 50%;
+    background: #fff;
+    color: #07574f;
+  }
+
+  .process-card h3 {
+    grid-area: title;
+    align-self: end;
+    margin: 0;
+    font-size: clamp(18px, 5vw, 22px);
+    line-height: 1.22;
+    overflow-wrap: normal;
+    text-wrap: pretty;
+  }
+
+  .process-card p {
+    grid-area: description;
+    align-self: start;
+    max-width: 34ch;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+    overflow-wrap: break-word;
+  }
+
+  .process-line {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .process-section {
+    padding: 46px 0;
+  }
+
+  .process-section .container {
+    padding: 0 14px;
+  }
+
+  .process-card {
+    grid-template-columns: 46px minmax(0, 1fr);
+    column-gap: 13px;
+    padding: 16px 13px;
+  }
+
+  .process-card .step {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .process-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .process-card h3 {
+    font-size: 18px;
+  }
+
+  .process-card p {
+    font-size: 13px;
+  }
+}
