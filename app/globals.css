@@ -3269,3 +3269,244 @@ a.contact-info-card:hover {
     font-size: 13px;
   }
 }
+
+
+/* Care process: centered timeline on desktop and mobile */
+.process-section .container {
+  width: min(1200px, calc(100% - 48px));
+  margin-left: auto;
+  margin-right: auto;
+}
+.process-section .section-heading {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.process-section .section-heading p {
+  margin-left: auto;
+  margin-right: auto;
+}
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  gap: 0;
+  margin-top: 42px;
+}
+.process-card {
+  min-width: 0;
+  min-height: 0;
+  padding: 0 18px 12px;
+  text-align: center;
+}
+.process-top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+}
+.process-card .step {
+  flex: 0 0 48px;
+}
+.process-icon {
+  flex: 0 0 42px;
+}
+.process-card h3 {
+  margin: 25px 0 8px;
+  line-height: 1.25;
+  text-align: center;
+}
+.process-card p {
+  max-width: 250px;
+  margin: 0 auto;
+  line-height: 1.65;
+  text-align: center;
+}
+.process-line {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  height: 1px;
+  width: calc(50% - 44px);
+  left: calc(50% + 56px);
+  right: auto;
+  top: 25px;
+  transform: none;
+  background: #c8ddd8;
+}
+.process-top,
+.process-card h3,
+.process-card p {
+  position: relative;
+}
+.process-top { z-index: 1; }
+
+@media (max-width: 760px) {
+  .process-section {
+    padding: 48px 0 50px;
+    overflow: hidden;
+  }
+  .process-section .container {
+    width: 100%;
+    max-width: 520px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .process-section .section-heading {
+    text-align: center;
+  }
+  .process-section .section-heading p {
+    max-width: 34ch;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .process-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    margin-top: 30px;
+  }
+  .process-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 8px 30px;
+    margin: 0 0 20px;
+    text-align: center;
+  }
+  .process-top {
+    justify-content: center;
+    gap: 12px;
+    min-height: auto;
+  }
+  .process-card .step {
+    width: 52px;
+    height: 52px;
+    flex-basis: 52px;
+    font-size: 15px;
+  }
+  .process-icon {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+  }
+  .process-card h3 {
+    margin: 18px 0 7px;
+    max-width: 100%;
+    font-size: clamp(21px, 5.8vw, 26px);
+    line-height: 1.2;
+    text-align: center;
+    text-wrap: balance;
+  }
+  .process-card p {
+    max-width: 32ch;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.55;
+    text-align: center;
+    text-wrap: pretty;
+  }
+  .process-line {
+    left: 50%;
+    top: calc(100% + 1px);
+    width: 1px;
+    height: 20px;
+    background: #c8ddd8;
+  }
+}
+@media (max-width: 380px) {
+  .process-section .container { padding: 0 16px; }
+  .process-card { padding-bottom: 26px; margin-bottom: 16px; }
+  .process-card h3 { font-size: 21px; }
+  .process-card p { font-size: 15px; }
+}
+
+
+/* Final alignment override: keep the process section and cards centered in the viewport */
+.process-section,
+.process-section > .container {
+  box-sizing: border-box;
+}
+.process-section > .container {
+  width: min(1200px, calc(100% - 48px));
+  max-width: 1200px;
+  margin-inline: auto !important;
+}
+.process-section .process-grid {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto !important;
+  justify-items: stretch;
+  box-sizing: border-box;
+}
+.process-section .process-card {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: 0;
+  box-sizing: border-box;
+  justify-self: stretch;
+}
+.process-section .process-card .process-top,
+.process-section .process-card h3,
+.process-section .process-card p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 760px) {
+  .process-section > .container {
+    width: calc(100% - 32px) !important;
+    max-width: 520px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative;
+    left: auto;
+    right: auto;
+    transform: none;
+  }
+  .process-section .process-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-items: center;
+    gap: 0;
+  }
+  .process-section .process-card {
+    display: flex;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 8px;
+    padding-right: 8px;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+  }
+  .process-section .process-card .process-top {
+    width: 100%;
+    justify-content: center;
+  }
+  .process-section .process-card h3,
+  .process-section .process-card p {
+    width: 100%;
+    max-width: 34ch;
+    text-align: center;
+  }
+}
+
+
+/* The process grid's desktop offset must never affect mobile layouts. */
+@media (max-width: 760px) {
+  .process-section .process-grid,
+  .process-grid {
+    padding-left: 0 !important;
+  }
+}
