@@ -3422,3 +3422,82 @@ a.contact-info-card:hover {
   .process-card h3 { font-size: 21px; }
   .process-card p { font-size: 15px; }
 }
+
+
+/* Final alignment override: keep the process section and cards centered in the viewport */
+.process-section,
+.process-section > .container {
+  box-sizing: border-box;
+}
+.process-section > .container {
+  width: min(1200px, calc(100% - 48px));
+  max-width: 1200px;
+  margin-inline: auto !important;
+}
+.process-section .process-grid {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto !important;
+  justify-items: stretch;
+  box-sizing: border-box;
+}
+.process-section .process-card {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: 0;
+  box-sizing: border-box;
+  justify-self: stretch;
+}
+.process-section .process-card .process-top,
+.process-section .process-card h3,
+.process-section .process-card p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 760px) {
+  .process-section > .container {
+    width: calc(100% - 32px) !important;
+    max-width: 520px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative;
+    left: auto;
+    right: auto;
+    transform: none;
+  }
+  .process-section .process-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-items: center;
+    gap: 0;
+  }
+  .process-section .process-card {
+    display: flex;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 8px;
+    padding-right: 8px;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+  }
+  .process-section .process-card .process-top {
+    width: 100%;
+    justify-content: center;
+  }
+  .process-section .process-card h3,
+  .process-section .process-card p {
+    width: 100%;
+    max-width: 34ch;
+    text-align: center;
+  }
+}
