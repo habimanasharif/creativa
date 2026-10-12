@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const EMAIL_RE = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function escapeHtml(value) {
   return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
@@ -36,7 +36,7 @@ export async function POST(request) {
   const submittedAt = new Date().toLocaleString("en-CA", { dateStyle: "medium", timeStyle: "short", timeZone: "America/Toronto" });
   const safe = {
     name: escapeHtml(name), email: escapeHtml(email), phone: escapeHtml(phone),
-    care: escapeHtml(care), message: escapeHtml(message).replace(/\\r?\\n/g, "<br />"),
+    care: escapeHtml(care), message: escapeHtml(message).replace(/\r?\n/g, "<br />"),
     submittedAt: escapeHtml(submittedAt),
   };
 
@@ -55,7 +55,7 @@ export async function POST(request) {
     '<p style="font-size:12px;color:#657873;margin:24px 0 0">Reply directly to this email to respond to ' + safe.name + '.</p></div></div>',
   ].join("");
 
-  const text = ["NEW CREATIVA CARE WEBSITE INQUIRY", "", "Full name: " + name, "Email address: " + email, "Phone number: " + phone, "Interested in: " + care, "Submitted: " + submittedAt + " (Kingston time)", "", "MESSAGE", message, "", "Reply directly to this email to respond to the sender."].join("\\n");
+  const text = ["NEW CREATIVA CARE WEBSITE INQUIRY", "", "Full name: " + name, "Email address: " + email, "Phone number: " + phone, "Interested in: " + care, "Submitted: " + submittedAt + " (Kingston time)", "", "MESSAGE", message, "", "Reply directly to this email to respond to the sender."].join("\n");
 
   try {
     const response = await fetch("https://api.resend.com/emails", {
