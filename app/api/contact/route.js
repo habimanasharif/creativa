@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const EMAIL_RE = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
 
 function escapeHtml(value) {
   return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
@@ -22,7 +22,11 @@ export async function POST(request) {
   if ([name, phone, care].some((value) => value.length > 200) || message.length > 10000) return NextResponse.json({ error: "One or more fields are too long." }, { status: 400 });
 
   const apiKey = process.env.RESEND_API_KEY;
-  const recipient = process.env.CONTACT_TO_EMAIL || "info@creativacare.ca";
+  const recipients = [
+    "info@creativacare.ca",
+    "florence.nibagwire@creativacare.ca",
+    "jeanpaul.mugwaneza@creativacare.ca",
+  ];
   const sender = process.env.CONTACT_FROM_EMAIL;
   if (!apiKey || !sender) {
     console.error("Contact email is not configured: RESEND_API_KEY and CONTACT_FROM_EMAIL are required.");
@@ -32,7 +36,7 @@ export async function POST(request) {
   const submittedAt = new Date().toLocaleString("en-CA", { dateStyle: "medium", timeStyle: "short", timeZone: "America/Toronto" });
   const safe = {
     name: escapeHtml(name), email: escapeHtml(email), phone: escapeHtml(phone),
-    care: escapeHtml(care), message: escapeHtml(message).replace(/\r?\n/g, "<br />"),
+    care: escapeHtml(care), message: escapeHtml(message).replace(/\\r?\\n/g, "<br />"),
     submittedAt: escapeHtml(submittedAt),
   };
 
@@ -51,13 +55,13 @@ export async function POST(request) {
     '<p style="font-size:12px;color:#657873;margin:24px 0 0">Reply directly to this email to respond to ' + safe.name + '.</p></div></div>',
   ].join("");
 
-  const text = ["NEW CREATIVA CARE WEBSITE INQUIRY", "", "Full name: " + name, "Email address: " + email, "Phone number: " + phone, "Interested in: " + care, "Submitted: " + submittedAt + " (Kingston time)", "", "MESSAGE", message, "", "Reply directly to this email to respond to the sender."].join("\n");
+  const text = ["NEW CREATIVA CARE WEBSITE INQUIRY", "", "Full name: " + name, "Email address: " + email, "Phone number: " + phone, "Interested in: " + care, "Submitted: " + submittedAt + " (Kingston time)", "", "MESSAGE", message, "", "Reply directly to this email to respond to the sender."].join("\\n");
 
   try {
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: { Authorization: "Bearer " + apiKey, "Content-Type": "application/json" },
-      body: JSON.stringify({ from: sender, to: [recipient], reply_to: email, subject: "New website inquiry: " + name + " — " + care, html, text }),
+      body: JSON.stringify({ from: sender, to: recipients, reply_to: email, subject: "New website inquiry: " + name + " — " + care, html, text }),
     });
     if (!response.ok) {
       const detail = await response.text();
