@@ -22,7 +22,11 @@ export async function POST(request) {
   if ([name, phone, care].some((value) => value.length > 200) || message.length > 10000) return NextResponse.json({ error: "One or more fields are too long." }, { status: 400 });
 
   const apiKey = process.env.RESEND_API_KEY;
-  const recipient = process.env.CONTACT_TO_EMAIL || "info@creativacare.ca";
+  const recipients = [
+    "info@creativacare.ca",
+    "florence.nibagwire@creativacare.ca",
+    "jeanpaul.mugwaneza@creativacare.ca",
+  ];
   const sender = process.env.CONTACT_FROM_EMAIL;
   if (!apiKey || !sender) {
     console.error("Contact email is not configured: RESEND_API_KEY and CONTACT_FROM_EMAIL are required.");
@@ -57,7 +61,7 @@ export async function POST(request) {
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: { Authorization: "Bearer " + apiKey, "Content-Type": "application/json" },
-      body: JSON.stringify({ from: sender, to: [recipient], reply_to: email, subject: "New website inquiry: " + name + " — " + care, html, text }),
+      body: JSON.stringify({ from: sender, to: recipients, reply_to: email, subject: "New website inquiry: " + name + " — " + care, html, text }),
     });
     if (!response.ok) {
       const detail = await response.text();
