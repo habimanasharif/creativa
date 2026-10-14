@@ -148,7 +148,7 @@ export default function Contact() {
               <div className="contact-social-links">
                 <a href="https://web.facebook.com/profile.php?id=61595213738752" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook size={20} /></a>
                 <a href="https://www.instagram.com/creativacare360" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={20} /></a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={20} /></a>
+                <a href="https://www.linkedin.com/in/creativa-care-06b04a444" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={20} /></a>
               </div>
             </div>
 
