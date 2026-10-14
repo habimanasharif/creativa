@@ -64,15 +64,15 @@ select {
 }
 .brand-logo {
   display: block;
-  width: 190px;
-  height: 46px;
+  width: 240px;
+  height: 58px;
   object-fit: contain;
   object-position: left center;
   flex: 0 1 auto;
 }
 .footer-brand-logo {
-  width: 190px;
-  height: 58px;
+  width: 230px;
+  height: 70px;
 }
 .brand-mark {
   width: 38px;
@@ -1089,8 +1089,8 @@ select {
   .site-header { height: 68px; }
   .nav-wrap { gap: 12px; }
   .brand { gap: 7px; }
-  .brand-logo { width: 150px; height: 38px; }
-  .footer-brand-logo { width: 170px; height: 48px; }
+  .brand-logo { width: 185px; height: 46px; }
+  .footer-brand-logo { width: 205px; height: 58px; }
   .brand-mark { width: 34px; height: 34px; font-size: 16px; border-width: 4px; }
   .brand strong { font-size: 12px; letter-spacing: 1.2px; }
   .brand small { font-size: 7px; }
