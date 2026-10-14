@@ -17,8 +17,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container nav-wrap">
         <Link href="/" className="brand" onClick={() => setOpen(false)}>
-          <span className="brand-mark">♥</span>
-          <span><strong>CREATIVA CARE</strong><small>Home Care • Compassion • Independence</small></span>
+          <img className="brand-logo" src="/images/Creativa%20Care%20Logo.png" alt="Creativa Care" />
         </Link>
         <nav className={open ? "desktop-nav mobile-open" : "desktop-nav"}>
           {links.map(([label, href]) => <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>)}
