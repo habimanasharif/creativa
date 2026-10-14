@@ -5,7 +5,7 @@ export default function Footer() {
   return <footer className="footer">
     <div className="container footer-grid">
       <div>
-        <Link href="/" className="brand footer-brand"><span className="brand-mark">♥</span><span><strong>CREATIVA CARE</strong><small>Home Care • Compassion • Independence</small></span></Link>
+        <Link href="/" className="brand footer-brand"><img className="brand-logo footer-brand-logo" src="/images/Creativa%20Care%20Logo.png" alt="Creativa Care" /></Link>
         <p className="muted">Compassionate non-medical home care helping people live safely, comfortably and independently at home.</p>
       </div>
       <div><h4>Explore</h4><Link href="/about">About</Link><Link href="/services">Services</Link></div>
