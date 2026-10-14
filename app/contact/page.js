@@ -146,8 +146,8 @@ export default function Contact() {
             <div className="contact-social-block">
               <h3>Connect With Us</h3>
               <div className="contact-social-links">
-                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook size={20} /></a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={20} /></a>
+                <a href="https://web.facebook.com/profile.php?id=61595213738752" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook size={20} /></a>
+                <a href="https://www.instagram.com/creativacare360" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={20} /></a>
                 <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={20} /></a>
               </div>
             </div>
