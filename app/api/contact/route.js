@@ -23,7 +23,6 @@ export async function POST(request) {
 
   const apiKey = process.env.RESEND_API_KEY;
   const recipients = [
-    "info@creativacare.ca",
     "florence.nibagwire@creativacare.ca",
     "jeanpaul.mugwaneza@creativacare.ca",
   ];
