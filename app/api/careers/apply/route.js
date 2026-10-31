@@ -121,6 +121,12 @@ export async function POST(request) {
 
   try {
     const resumeBase64 = Buffer.from(await resume.arrayBuffer()).toString("base64");
+    const contentTypeByExtension = {
+      ".pdf": "application/pdf",
+      ".doc": "application/msword",
+      ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    };
+    const contentType = contentTypeByExtension[extension];
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -134,7 +140,7 @@ export async function POST(request) {
         subject: "Job application: " + jobTitle + " — " + name,
         html,
         text,
-        attachments: [{ filename, content: resumeBase64 }],
+        attachments: [{ filename, content: resumeBase64, content_type: contentType }],
       }),
     });
 
