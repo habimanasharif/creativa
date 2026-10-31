@@ -3609,3 +3609,15 @@ a.contact-info-card:hover {
   .careers-bottom-cta-inner { flex-direction: column; align-items: flex-start; }
   .careers-bottom-cta-inner .btn { width: 100%; }
 }
+
+.careers-job-main { flex: 1; min-width: 0; }
+.careers-job-employer { margin: 3px 0 12px !important; color: var(--green) !important; font-size: 13px !important; font-weight: 700; }
+.careers-job-detail { margin-top: 22px; }
+.careers-job-detail h4 { margin: 0 0 8px; color: var(--ink); font-size: 16px; font-weight: 700; }
+.careers-job-detail p { line-height: 1.75; }
+.careers-job-detail ul { margin: 8px 0 0; padding-left: 20px; color: var(--muted); font-size: 14px; line-height: 1.75; }
+.careers-job-detail li + li { margin-top: 5px; }
+.careers-apply-btn { align-self: flex-start; }
+@media (max-width: 760px) {
+  .careers-apply-btn { align-self: stretch; }
+}
