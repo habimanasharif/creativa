@@ -118,11 +118,11 @@ export default function Contact() {
           </div>
 
           <aside className="contact-info-panel" aria-label="Contact information">
-            <a className="contact-info-card" href="tel:+16135837320">
+            <a className="contact-info-card" href="tel:+13439892596">
               <span className="contact-info-icon"><Phone size={23} /></span>
               <span className="contact-info-copy">
                 <strong>Call Us</strong>
-                <span>613-583-7320</span>
+                <span>+1 (343) 989-2596</span>
               </span>
               <ArrowUpRight className="contact-info-arrow" size={18} />
             </a>
