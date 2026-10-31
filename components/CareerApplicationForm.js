@@ -1,10 +1,23 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { ArrowRight, Paperclip } from "lucide-react";
 
 export default function CareerApplicationForm({ jobTitle }) {
   const formId = useId().replace(/:/g, "");
+  const applicationRef = useRef(null);
+
+  useEffect(() => {
+    function openApplicationFromLink() {
+      if (window.location.hash === "#apply" && applicationRef.current) {
+        applicationRef.current.open = true;
+      }
+    }
+
+    openApplicationFromLink();
+    window.addEventListener("hashchange", openApplicationFromLink);
+    return () => window.removeEventListener("hashchange", openApplicationFromLink);
+  }, []);
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
@@ -44,7 +57,7 @@ export default function CareerApplicationForm({ jobTitle }) {
   }
 
   return (
-    <details className="career-application">
+    <details ref={applicationRef} className="career-application">
       <summary>Apply for this position <ArrowRight size={16} /></summary>
       {sent ? (
         <div className="career-application-success" role="status">
