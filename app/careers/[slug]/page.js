@@ -93,11 +93,6 @@ export default async function CareerJobPage({ params }) {
 
       <section className="section careers-apply-section" id="apply">
         <div className="container">
-          <div className="careers-section-heading">
-            <span className="eyebrow">TAKE THE NEXT STEP</span>
-            <h2>Apply for {job.title}</h2>
-            <p>Complete the form below and attach your résumé to submit your application to Creativa Care.</p>
-          </div>
           <div className="careers-apply-panel">
             <CareerApplicationForm jobTitle={job.title} />
           </div>
