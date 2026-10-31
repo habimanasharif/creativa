@@ -127,8 +127,8 @@ export default function Home() {
               <Link className="btn" href="/contact">
                 Get Started <ArrowRight size={16} />
               </Link>
-              <a className="btn btn-outline" href="tel:+16135837320">
-                <Phone size={16} /> Call 613-583-7320
+              <a className="btn btn-outline" href="tel:+13439892596">
+                <Phone size={16} /> Call +1 (343) 989-2596
               </a>
             </div>
             <div className="hero-trust">
