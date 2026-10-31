@@ -34,7 +34,7 @@ export default function About() {
         <div className="about-reference-hero-copy">
           <h1>About Us</h1>
           <p>Compassion. Dignity. Independence.</p>
-          <div className="about-reference-hero-meta"><span><MapPin size={14} /> Kingston, Ontario</span><span><Phone size={14} /> 613-583-7320</span></div>
+          <div className="about-reference-hero-meta"><span><MapPin size={14} /> Kingston, Ontario</span><span><Phone size={14} /> +1 (343) 989-2596</span></div>
         </div>
       </section>
 
