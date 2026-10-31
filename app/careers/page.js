@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, BriefcaseBusiness, HeartHandshake, Mail, MapPin, Sparkles, UsersRound } from "lucide-react";
+import { ArrowRight, BriefcaseBusiness, Mail, MapPin } from "lucide-react";
 import CareerApplicationForm from "@/components/CareerApplicationForm";
 
 export const metadata = {
@@ -41,11 +41,6 @@ const jobs = [
   }
 ];
 
-const reasons = [
-  { icon: <HeartHandshake size={21} />, title: "Make a difference", text: "Build meaningful relationships and help people feel supported at home." },
-  { icon: <UsersRound size={21} />, title: "People first", text: "Join a team that values compassion, dignity and respect." },
-  { icon: <Sparkles size={21} />, title: "Grow with us", text: "Bring your strengths, learn along the way and grow your experience." },
-];
 
 export default function CareersPage() {
   return (
@@ -56,25 +51,6 @@ export default function CareersPage() {
           <h1>Make a Difference.<br />Build a Meaningful Career.</h1>
           <p>Join a team that believes compassionate care can make every day better. Help individuals and families feel supported, respected and at home.</p>
           <a className="btn" href="#open-positions">Explore Opportunities <ArrowRight size={16} /></a>
-        </div>
-      </section>
-
-      <section className="section careers-intro">
-        <div className="container">
-          <div className="careers-section-heading">
-            <span className="eyebrow">WHY WORK WITH US</span>
-            <h2>Bring your compassion. Make an impact.</h2>
-            <p>At Creativa Care, the little things matter: a kind conversation, a helping hand and the comfort of knowing someone cares. We’re looking for people who share that belief.</p>
-          </div>
-          <div className="careers-reasons">
-            {reasons.map((reason) => (
-              <article className="careers-reason" key={reason.title}>
-                <span className="careers-reason-icon">{reason.icon}</span>
-                <h3>{reason.title}</h3>
-                <p>{reason.text}</p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
