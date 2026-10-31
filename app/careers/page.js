@@ -1,46 +1,12 @@
 import Link from "next/link";
 import { ArrowRight, BriefcaseBusiness, Mail, MapPin } from "lucide-react";
-import CareerApplicationForm from "@/components/CareerApplicationForm";
+import { jobs } from "@/data/careers";
 
 export const metadata = {
   title: "Careers",
   description: "Explore career opportunities with Creativa Care and help make a meaningful difference through compassionate home care in Kingston, Ontario.",
   alternates: { canonical: "/careers" },
 };
-
-// Add or edit opportunities in this list. Each job appears automatically on the Careers page.
-const jobs = [
-  {
-    title: "Personal Support Worker",
-    employer: "Creativa Care",
-    type: "Full-time",
-    workArrangement: "On-site",
-    location: "Kingston, Ontario",
-    companyDescription: "Creativa Care is a non-medical home care agency serving Kingston, Ontario and surrounding areas. We provide personalized in-home support and companionship for seniors and individuals who need assistance with daily living. Our services include personal care, companionship, light housekeeping, respite care, and support with everyday routines. We are committed to helping every client maintain independence, dignity, and comfort at home through compassionate, professional, and reliable care.",
-    roleDescription: "The Personal Support Worker at Creativa Care provides direct non-medical support to clients in their homes, ensuring comfort, safety, and dignity in daily living. This full-time, on-site role is based in Kingston, ON, and includes assisting clients with personal care, mobility, light housekeeping, meal preparation, and support with daily routines. The Personal Support Worker offers companionship, engages clients in meaningful activities, and accompanies them to appointments as needed. Responsibilities also include monitoring changes in clients’ well-being, documenting care provided, and communicating observations to supervisors or family members in a clear, respectful manner. The role requires working collaboratively with the Creativa Care team to maintain high standards of person-centered care and uphold organizational values.",
-    responsibilities: [
-      "Assist clients with personal care, mobility, and daily routines while maintaining their comfort, safety, and dignity.",
-      "Provide light housekeeping and meal preparation.",
-      "Offer companionship and engage clients in meaningful activities.",
-      "Accompany clients to appointments as needed.",
-      "Monitor changes in clients’ well-being and report observations to supervisors or family members.",
-      "Document care provided clearly and accurately.",
-      "Work collaboratively with the Creativa Care team and uphold person-centered care standards."
-    ],
-    qualifications: [
-      "Experience as a Support Worker or Personal Support Worker, with knowledge of home care practices and person-centered support.",
-      "Strong interpersonal skills and communication abilities to build trust, provide companionship, and interact effectively with clients, families, and team members.",
-      "Understanding of safeguarding principles, including client safety, confidentiality, and adherence to professional and ethical care standards.",
-      "Ability to use basic technical support tools and digital platforms (e.g., electronic schedules, care documentation systems, mobile apps) to record and access client information.",
-      "Relevant certification or training in Personal Support Work, Health Care Aide, or equivalent; current CPR/First Aid is an asset.",
-      "Knowledge of safe mobility assistance, infection prevention, and proper body mechanics in a home care setting.",
-      "Reliability, patience, cultural sensitivity, and the ability to work independently in clients’ homes.",
-      "A valid driver’s license and access to reliable transportation for client visits within Kingston and surrounding areas is an asset."
-    ],
-    email: "info@creativacare.ca"
-  }
-];
-
 
 export default function CareersPage() {
   return (
@@ -63,36 +29,20 @@ export default function CareersPage() {
           </div>
 
           {jobs.length > 0 ? (
-            <div className="careers-job-list">
-              {jobs.map((job, index) => (
-                <article className="careers-job-card" key={job.title + index}>
-                  <div className="careers-job-main">
+            <div className="careers-job-list careers-job-grid">
+              {jobs.map((job) => (
+                <article className="careers-job-card careers-job-summary-card" key={job.slug}>
+                  <div className="careers-job-summary-top">
                     <span className="careers-job-type">{job.type}{job.workArrangement ? ` · ${job.workArrangement}` : ""}</span>
-                    <h3>{job.title}</h3>
-                    {job.employer && <p className="careers-job-employer">{job.employer}</p>}
-                    <p>{job.roleDescription || job.summary}</p>
-                    <div className="careers-job-location"><MapPin size={15} /> {job.location || "Kingston, Ontario"}</div>
-
-                    {job.companyDescription && (
-                      <div className="careers-job-detail">
-                        <h4>About the organization</h4>
-                        <p>{job.companyDescription}</p>
-                      </div>
-                    )}
-                    {job.responsibilities?.length > 0 && (
-                      <div className="careers-job-detail">
-                        <h4>Key responsibilities</h4>
-                        <ul>{job.responsibilities.map((item) => <li key={item}>{item}</li>)}</ul>
-                      </div>
-                    )}
-                    {job.qualifications?.length > 0 && (
-                      <div className="careers-job-detail">
-                        <h4>Qualifications</h4>
-                        <ul>{job.qualifications.map((item) => <li key={item}>{item}</li>)}</ul>
-                      </div>
-                    )}
+                    <span className="careers-job-icon"><BriefcaseBusiness size={20} /></span>
                   </div>
-                  <CareerApplicationForm jobTitle={job.title} />
+                  <h3>{job.title}</h3>
+                  <p className="careers-job-employer">{job.employer}</p>
+                  <p className="careers-job-summary">{job.summary}</p>
+                  <div className="careers-job-location"><MapPin size={15} /> {job.location || "Kingston, Ontario"}</div>
+                  <Link className="btn careers-view-details" href={`/careers/${job.slug}`}>
+                    View Details <ArrowRight size={16} />
+                  </Link>
                 </article>
               ))}
             </div>
