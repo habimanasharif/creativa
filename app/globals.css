@@ -3524,3 +3524,88 @@ a.contact-info-card:hover {
     padding-left: 0 !important;
   }
 }
+
+
+/* Careers page */
+.careers-hero {
+  min-height: 390px;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(0, 55, 50, .88) 0%, rgba(0, 55, 50, .68) 52%, rgba(0, 55, 50, .22) 100%),
+    url("https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1800&q=85") center 38%/cover;
+}
+.careers-hero .container { padding-top: 18px; padding-bottom: 18px; }
+.careers-hero h1 { max-width: 760px; font-size: clamp(42px, 5.2vw, 62px); }
+.careers-hero p { max-width: 620px; margin-bottom: 25px; }
+.careers-hero .eyebrow { color: #d9eee7; }
+.careers-intro { background: #fff; }
+.careers-section-heading { max-width: 720px; margin: 0 auto 38px; text-align: center; }
+.careers-section-heading h2 {
+  margin: 9px 0 12px;
+  color: var(--ink);
+  font: 600 clamp(30px, 3.5vw, 40px)/1.12 "Playfair Display", Georgia, serif;
+}
+.careers-section-heading p { margin: 0; color: var(--muted); }
+.careers-reasons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.careers-reason {
+  padding: 28px 25px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,63,58,.045);
+}
+.careers-reason-icon, .careers-empty-icon {
+  display: grid; place-items: center;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--mint); color: var(--green);
+}
+.careers-reason h3, .careers-job-card h3, .careers-empty h3 {
+  margin: 17px 0 7px;
+  color: var(--ink);
+  font: 600 22px/1.2 "Playfair Display", Georgia, serif;
+}
+.careers-reason p, .careers-job-card p, .careers-empty p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.careers-positions { background: var(--cream); }
+.careers-job-list { display: grid; gap: 16px; max-width: 900px; margin: 0 auto; }
+.careers-job-card {
+  display: flex; justify-content: space-between; align-items: center; gap: 28px;
+  padding: 27px 30px; border: 1px solid var(--line); border-radius: 16px;
+  background: #fff; box-shadow: 0 8px 24px rgba(0,63,58,.045);
+}
+.careers-job-type {
+  display: inline-block; padding: 5px 10px; border-radius: 999px;
+  background: var(--mint); color: var(--green); font-size: 11px; font-weight: 800;
+}
+.careers-job-card h3 { margin: 11px 0 6px; }
+.careers-job-location { display: flex; align-items: center; gap: 7px; margin-top: 13px; color: var(--muted); font-size: 12px; }
+.careers-job-card ul { margin: 14px 0 0; padding-left: 19px; color: var(--muted); font-size: 13px; }
+.careers-apply-btn { flex: 0 0 auto; white-space: nowrap; }
+.careers-empty {
+  max-width: 760px; margin: 0 auto; padding: 42px 32px; text-align: center;
+  border: 1px solid var(--line); border-radius: 18px; background: #fff;
+  box-shadow: 0 8px 24px rgba(0,63,58,.045);
+}
+.careers-empty-icon { margin: 0 auto 14px; }
+.careers-empty h3 { margin: 0 0 9px; }
+.careers-empty p { max-width: 560px; margin: 0 auto; }
+.careers-email-link {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 20px;
+  color: var(--green); font-size: 13px; font-weight: 800;
+}
+.careers-bottom-cta { padding: 52px 0; background: var(--green-deep); color: #fff; }
+.careers-bottom-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.careers-bottom-cta .eyebrow { color: #b9ddd3; }
+.careers-bottom-cta h2 { margin: 7px 0; font: 600 clamp(26px, 3vw, 36px)/1.15 "Playfair Display", Georgia, serif; }
+.careers-bottom-cta p { margin: 0; color: #d5e7e3; font-size: 14px; }
+.careers-bottom-cta .btn { flex: 0 0 auto; background: #fff; color: var(--green); border-color: #fff; }
+@media (max-width: 760px) {
+  .careers-hero { min-height: 360px; padding: 48px 0; background-position: 58% center; }
+  .careers-hero h1 { font-size: clamp(38px, 10vw, 48px); }
+  .careers-reasons { grid-template-columns: 1fr; gap: 14px; }
+  .careers-reason { padding: 23px 21px; }
+  .careers-job-card { flex-direction: column; align-items: stretch; padding: 23px 21px; gap: 20px; }
+  .careers-apply-btn { width: 100%; }
+  .careers-empty { padding: 32px 21px; }
+  .careers-bottom-cta-inner { flex-direction: column; align-items: flex-start; }
+  .careers-bottom-cta-inner .btn { width: 100%; }
+}
