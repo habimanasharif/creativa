@@ -11,12 +11,12 @@ export const metadata = {
 const jobs = [
   {
     title: "Personal Support Worker",
-    employer: "Pilgrim Care Connect Home",
+    employer: "Creativa Care",
     type: "Full-time",
     workArrangement: "On-site",
     location: "Kingston, Ontario",
-    companyDescription: "Pilgrim Care Connect Home (PCCH) is an Ontario-based home care provider focused on helping individuals live with dignity, independence, and comfort in their own homes. PCCH delivers compassionate, person-centered non-medical support, including personal care, companionship, homemaking, respite care, post-hospital assistance, and appointment accompaniment. The organization emphasizes understanding each person's unique needs, respecting their choices, and building trusting relationships grounded in compassion and reliability. PCCH is committed to making everyday life better for the people it serves while giving families confidence and peace of mind. Guided by the values of “Compassionate Care, Dignified Living, Peace of Mind,” PCCH continues to grow as a trusted partner in home care.",
-    roleDescription: "The Personal Support Worker at Pilgrim Care Connect Home provides direct non-medical support to clients in their homes, ensuring comfort, safety, and dignity in daily living. This full-time, on-site role is based in Kingston, ON, and includes assisting clients with personal care, mobility, light housekeeping, meal preparation, and support with daily routines. The Personal Support Worker offers companionship, engages clients in meaningful activities, and accompanies them to appointments as needed. Responsibilities also include monitoring changes in clients’ well-being, documenting care provided, and communicating observations to supervisors or family members in a clear, respectful manner. The role requires working collaboratively with the PCCH team to maintain high standards of person-centered care and uphold organizational values.",
+    companyDescription: "Creativa Care (PCCH) is an Ontario-based home care provider focused on helping individuals live with dignity, independence, and comfort in their own homes. PCCH delivers compassionate, person-centered non-medical support, including personal care, companionship, homemaking, respite care, post-hospital assistance, and appointment accompaniment. The organization emphasizes understanding each person's unique needs, respecting their choices, and building trusting relationships grounded in compassion and reliability. PCCH is committed to making everyday life better for the people it serves while giving families confidence and peace of mind. Guided by the values of “Compassionate Care, Dignified Living, Peace of Mind,” PCCH continues to grow as a trusted partner in home care.",
+    roleDescription: "The Personal Support Worker at Creativa Care provides direct non-medical support to clients in their homes, ensuring comfort, safety, and dignity in daily living. This full-time, on-site role is based in Kingston, ON, and includes assisting clients with personal care, mobility, light housekeeping, meal preparation, and support with daily routines. The Personal Support Worker offers companionship, engages clients in meaningful activities, and accompanies them to appointments as needed. Responsibilities also include monitoring changes in clients’ well-being, documenting care provided, and communicating observations to supervisors or family members in a clear, respectful manner. The role requires working collaboratively with the Creativa Care team to maintain high standards of person-centered care and uphold organizational values.",
     responsibilities: [
       "Assist clients with personal care, mobility, and daily routines while maintaining their comfort, safety, and dignity.",
       "Provide light housekeeping and meal preparation.",
@@ -24,7 +24,7 @@ const jobs = [
       "Accompany clients to appointments as needed.",
       "Monitor changes in clients’ well-being and report observations to supervisors or family members.",
       "Document care provided clearly and accurately.",
-      "Work collaboratively with the PCCH team and uphold person-centered care standards."
+      "Work collaboratively with the Creativa Care team and uphold person-centered care standards."
     ],
     qualifications: [
       "Experience as a Support Worker or Personal Support Worker, with knowledge of home care practices and person-centered support.",
