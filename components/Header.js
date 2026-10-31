@@ -22,7 +22,7 @@ export default function Header() {
         </Link>
         <nav className={open ? "desktop-nav mobile-open" : "desktop-nav"}>
           {links.map(([label, href]) => <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>)}
-          <a className="phone-link" href="tel:+16135837320"><Phone size={15}/> 613-583-7320</a>
+          <a className="phone-link" href="tel:+13439892596"><Phone size={15}/> +1 (343) 989-2596</a>
           <Link className="btn btn-small" href="/contact" onClick={() => setOpen(false)}>Get Started</Link>
         </nav>
         <button className="menu-btn" aria-label="Toggle navigation" onClick={() => setOpen(!open)}>
