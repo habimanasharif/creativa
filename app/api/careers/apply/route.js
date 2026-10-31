@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const MAX_RESUME_BYTES = 5 * 1024 * 1024;
+const MAX_RESUME_BYTES = 4 * 1024 * 1024;
 const ALLOWED_EXTENSIONS = new Set([".pdf", ".doc", ".docx"]);
 
 function escapeHtml(value) {
@@ -38,13 +38,22 @@ export async function POST(request) {
     return NextResponse.json({ error: "One or more fields are too long." }, { status: 400 });
   }
   if (resume.size <= 0 || resume.size > MAX_RESUME_BYTES) {
-    return NextResponse.json({ error: "Your résumé must be a non-empty file of 5 MB or smaller." }, { status: 400 });
+    return NextResponse.json({ error: "Your résumé must be a non-empty file of 4 MB or smaller." }, { status: 400 });
   }
 
   const filename = String(resume.name || "resume").replace(/[\\/\r\n"]/g, "_");
   const extension = filename.toLowerCase().slice(filename.lastIndexOf("."));
   if (!ALLOWED_EXTENSIONS.has(extension)) {
     return NextResponse.json({ error: "Please upload your résumé as a PDF, DOC or DOCX file." }, { status: 400 });
+  }
+  const allowedMimeTypes = new Set([
+    "application/pdf",
+    "application/msword",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "application/octet-stream",
+  ]);
+  if (resume.type && !allowedMimeTypes.has(resume.type)) {
+    return NextResponse.json({ error: "The résumé file type is not supported. Please upload a PDF, DOC or DOCX file." }, { status: 400 });
   }
 
   const apiKey = process.env.RESEND_API_KEY;
