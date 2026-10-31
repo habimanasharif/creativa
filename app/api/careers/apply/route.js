@@ -63,6 +63,7 @@ export async function POST(request) {
   }
 
   const recipients = [
+    "info@creativacare.ca",
     "florence.nibagwire@creativacare.ca",
     "jeanpaul.mugwaneza@creativacare.ca",
   ];
