@@ -13,8 +13,8 @@ export default function CTA() {
           <Link className="btn btn-light" href="/contact">
             Request a Consultation <ArrowRight size={17} />
           </Link>
-          <a className="btn btn-outline-light" href="tel:+16135837320">
-            <Phone size={17} /> 613-583-7320
+          <a className="btn btn-outline-light" href="tel:+13439892596">
+            <Phone size={17} /> +1 (343) 989-2596
           </a>
         </div>
       </div>

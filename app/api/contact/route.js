@@ -29,7 +29,7 @@ export async function POST(request) {
   const sender = "Creativa Care <info@creativacare.ca>";
   if (!apiKey) {
     console.error("Contact email is not configured: RESEND_API_KEY is required.");
-    return NextResponse.json({ error: "The contact form is temporarily unavailable. Please email info@creativacare.ca or call 613-583-7320." }, { status: 503 });
+    return NextResponse.json({ error: "The contact form is temporarily unavailable. Please email info@creativacare.ca or call +1 (343) 989-2596." }, { status: 503 });
   }
 
   const submittedAt = new Date().toLocaleString("en-CA", { dateStyle: "medium", timeStyle: "short", timeZone: "America/Toronto" });
