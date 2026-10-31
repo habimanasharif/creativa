@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, BriefcaseBusiness, HeartHandshake, Mail, MapPin, Sparkles, UsersRound } from "lucide-react";
+import CareerApplicationForm from "@/components/CareerApplicationForm";
 
 export const metadata = {
   title: "Careers",
@@ -115,9 +116,7 @@ export default function CareersPage() {
                       </div>
                     )}
                   </div>
-                  <a className="btn careers-apply-btn" href={`mailto:${job.email || "info@creativacare.ca"}?subject=${encodeURIComponent("Application: " + job.title)}`}>
-                    Apply Now <ArrowRight size={16} />
-                  </a>
+                  <CareerApplicationForm jobTitle={job.title} />
                 </article>
               ))}
             </div>
