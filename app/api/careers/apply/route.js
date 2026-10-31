@@ -62,11 +62,7 @@ export async function POST(request) {
     return NextResponse.json({ error: "The application form is temporarily unavailable. Please email info@creativacare.ca." }, { status: 503 });
   }
 
-  const recipients = [
-    "info@creativacare.ca",
-    "florence.nibagwire@creativacare.ca",
-    "jeanpaul.mugwaneza@creativacare.ca",
-  ];
+  const recipients = ["info@creativacare.ca"];
   const sender = "Creativa Care <info@creativacare.ca>";
   const submittedAt = new Date().toLocaleString("en-CA", {
     dateStyle: "medium",
