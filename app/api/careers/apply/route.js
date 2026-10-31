@@ -137,7 +137,7 @@ export async function POST(request) {
         from: sender,
         to: recipients,
         reply_to: email,
-        subject: "Job application: " + jobTitle + " — " + name,
+        subject: "Job application: " + jobTitle.replace(/[\r\n]+/g, " ").slice(0, 160) + " — " + name.replace(/[\r\n]+/g, " ").slice(0, 120),
         html,
         text,
         attachments: [{ filename, content: resumeBase64, content_type: contentType }],
