@@ -12,6 +12,7 @@ import {
   UserRound,
   ArrowRight,
   Phone,
+  Languages,
   Sparkles,
   House,
   UsersRound,
@@ -123,6 +124,13 @@ export default function Home() {
               Personalized, non-medical home care and companionship for seniors
               and individuals who value their independence, dignity and comfort.
             </p>
+            <div className="hero-language" aria-label="Services available in English and French">
+              <Languages size={19} aria-hidden="true" />
+              <div>
+                <strong>English &amp; French support</strong>
+                <span>Service en anglais et en français</span>
+              </div>
+            </div>
             <div className="hero-actions">
               <Link className="btn" href="/contact">
                 Get Started <ArrowRight size={16} />
